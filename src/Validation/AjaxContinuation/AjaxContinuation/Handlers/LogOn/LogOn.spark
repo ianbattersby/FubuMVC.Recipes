@@ -1,0 +1,71 @@
+﻿<viewdata model="AjaxContinuation.Handlers.LogOn.LogOnRequestModel" />
+
+<content:title>Authenticate</content:title>
+
+<content:scripts>
+  <style>
+    .error {
+        background-color: #FA5858;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $(":input").each(function(){
+
+    $(this).keyup(function(){
+    $(this).removeClass("error");
+    });
+
+    });
+    $("#btnSubmit").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+    type: "POST",
+    dataType: "json",
+    url: "log-on",
+    data: $("#logonForm").serialize(),
+    success: function (response) {
+    /* response
+    { "success":false,
+    "errors":[
+    {
+    "category":null,
+    "field":"UserName",
+    "message":"Required Field"
+    },
+    {
+    "category":null,
+    "field":"Password",
+    "message":"Required Field"
+    }
+    ]
+    }
+    */
+    if(response.success == false){
+    for (var i=0; i<response.errors.length; i++)
+                $("#"+response.errors[i].field).addClass("error");
+              
+    } else {
+    alert(response.success);
+    }
+    },
+    error:function(x,e){
+    alert("error : " + x.status + " - " + e);
+    }
+    });
+    });
+    });
+  </script>
+</content:scripts>
+
+<content:main>
+  <form id="logonForm" action="log-on" method="post">
+    <label>Username</label>
+    <input type="text" id="UserName" name="UserName" />
+    <br/>
+    <label>Password</label>
+    <input type="password" id="Password" name="Password" />
+    <br/>
+    <input id="btnSubmit" type="submit" value="go"/>
+  </form>
+</content:main>
