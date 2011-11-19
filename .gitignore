@@ -7,7 +7,7 @@ src/CommonAssemblyInfo.cs
 *.cache
 
 # Fubu
-fubu-content
+fubu-content/*
 results
 build
 artifacts
