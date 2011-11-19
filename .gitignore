@@ -1,3 +1,19 @@
+# Visual Studio
+obj
+bin
+src/CommonAssemblyInfo.cs
+*.csproj.user
+*.suo
+*.cache
+
+# Fubu
+fubu-content
+
+# NuGet
+src/packages
+repositories.config
+
 # Resharper
-src/Validation/AjaxContinuation/_Resharper.*/
-src/Validation/AjaxContinuation/*.resharper.user
+*.resharper.user
+*.ReSharper.user
+*/_Resharper.*/
