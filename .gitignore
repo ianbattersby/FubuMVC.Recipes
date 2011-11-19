@@ -8,6 +8,9 @@ src/CommonAssemblyInfo.cs
 
 # Fubu
 fubu-content
+results
+build
+artifacts
 
 # NuGet
 src/packages
