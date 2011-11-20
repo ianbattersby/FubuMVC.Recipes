@@ -83,7 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\desert.jpg" />
-    <Content Include="fubu-content\FubuMVC.GettingStarted.dll" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
