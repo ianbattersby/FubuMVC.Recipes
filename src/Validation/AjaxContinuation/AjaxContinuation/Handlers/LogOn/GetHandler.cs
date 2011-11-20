@@ -5,7 +5,7 @@ namespace AjaxContinuation.Handlers.LogOn
     {
         public LogOnRequestModel Execute()
         {
-            return new LogOnRequestModel();
+            return new LogOnRequestModel(); 
         }
     }
 }

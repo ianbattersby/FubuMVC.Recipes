@@ -1,10 +1,12 @@
 ﻿namespace AjaxContinuation.Handlers.LogOn
 {
+    using FubuMVC.Core.Ajax;
+
     public class PostHandler
     {
-        public FubuMVC.Core.Ajax.AjaxContinuation Execute(LogOnInputModel input)
+        public AjaxContinuation Execute(LogOnInputModel input)
         {
-            return new FubuMVC.Core.Ajax.AjaxContinuation
+            return new AjaxContinuation
             {
                 Success = true
             };
