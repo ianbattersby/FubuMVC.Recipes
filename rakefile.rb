@@ -80,10 +80,11 @@ task :compile_and_tests => [:restore_if_missing, :clean, :version] do
       MSBuildRunner.compile :compilemode => COMPILE_TARGET, :solutionfile => solution_file, :clrversion => CLR_TOOLS_VERSION
     end
 
-    FileList.new("#{solution_dir}/*.Tests.*.dll").each do |test_assembly|
-      puts "\n\n    Executing tests: #{test_assembly}\n"
-      runner = NUnitRunner.new :compilemode => COMPILE_TARGET, :source => 'src', :platform => 'x86'
-      runner.executeTests ["#{test_binary}"]
-    end
+    tests = FileList.new("#{solution_dir}/*.Tests", "#{solution_dir}/*.Tests.*").collect! { |element| 
+      "#{element}/hack/".pathmap("%-1d")
+    }
+
+    runner = NUnitRunner.new :compilemode => COMPILE_TARGET, :source => solution_dir, :platform => 'x86'
+    runner.executeTests tests
   end
 end
