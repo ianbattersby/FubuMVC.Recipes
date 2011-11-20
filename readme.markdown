@@ -6,7 +6,7 @@ To learn more about FubuMVC head on over to the [FubuMVC website](http://mvc.fub
 
 What is FubuMVC.Recipes?
 --
-FubuMVC has a thriving community that is not only dedicated to the continued development of the framework but also devotes it's time to support and documentation; however with such rapidly emerging features and 'many ways to skin the preverbial cat' it was [suggested](http://groups.google.com/group/fubumvc-devel/browse_thread/thread/5e921b5f5ea8cbb5/a613c98c2b4f9fa4?lnk=gst&q=recipes#a613c98c2b4f9fa4) a collection of code recipes might aid adoption for newbies.
+FubuMVC has a thriving community that is not only dedicated to the continued development of the framework but also devotes it's time to support and documentation; however with such rapidly emerging features and 'many ways to skin the preverbial cat' it was [suggested](http://groups.google.com/group/fubumvc-devel/browse_thread/thread/5e921b5f5ea8cbb5/a613c98c2b4f9fa4) a collection of code recipes might aid adoption for newbies.
 
 What will you find here?
 --
