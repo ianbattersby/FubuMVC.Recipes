@@ -1,0 +1,22 @@
+﻿<use namespace="CustomAuthorizationPolicy.Web.Handlers.Account.LogOn" />
+<viewdata model="CustomAuthorizationPolicy.Web.Handlers.Account.LogOn.LogOnViewModel" />
+
+<content:title>Log On</content:title>
+
+<content:main>
+    <p>You can log into this recipe with any user/password combination below, access is based on:</p>
+    <ul>
+        <li><strong>BasicUser + &lt;any password&gt;</strong> Can access the system with basic privileges</li>
+        <li><strong>AdvUser + &lt;any password&gt;</strong> Has advanced privileges and access to advanced sections</li>
+        <li><strong>MapsUser + &lt;any password&gt;</strong> Is an advanced user who also access to the maps section</li>
+    </ul>
+    <form name="logonForm" method="post" action="${ this.Urls.UrlFor<LogOnRequestModel>() }">
+        <label for="logonName">Username:</label>
+        <input name="name" id="logonName" size="20" maxlength="255" value="BasicUser" />
+
+        <label for="logonPassword">Password:</label>
+        <input name="password" id="logonPassword" size="20" maxlength="255" />
+
+        <input type="submit" value="Log On" />
+    </form>
+</content:main>
