@@ -27,3 +27,4 @@ We ask that all recipe submissions implement the following;
 * Include `nuget.config` in solution directory pointing at `/src/packages`
 * Solution directory named "Recipe" that includes `readme.markdown` and `nuget.config`
 * Follow directory naming convention, see the Wiki [headers here](https://github.com/ianbattersby/FubuMVC.Recipes/wiki)
+* Build successfully from command-line using Rake with no failing tests
