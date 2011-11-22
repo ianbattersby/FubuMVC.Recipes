@@ -1,0 +1,10 @@
+﻿<use namespace="BasicAuthorizationPolicy.Web.Handlers.AdvSectionOne" />
+<viewdata model="BasicAuthorizationPolicy.Web.Handlers.AdvSectionOne.AdvSectionOneViewModel" />
+
+<content:title>Advanced Area</content:title>
+
+<content:main>
+    <p>
+        This is the advanced area, you must be in the Advanced role to access it.
+    </p>
+</content:main>
