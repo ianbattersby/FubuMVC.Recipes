@@ -18,4 +18,12 @@ If you think we are missing a trick in making adoption easier with these recipes
 
 Contributing
 --
-We welcome and encourage contributions and would suggest doing so by forking your own version of this repository and submitting a pull request, for more details on how to best do this check out the [Fubu contribute page](http://fubu-project.org/contribute/).
+We welcome and encourage contributions and would suggest doing so by forking your own version of this repository and submitting a pull request, for more details on Git best-practice check out the [Fubu contribute page](http://fubu-project.org/contribute/).
+
+We ask that all recipe submissions implement the following;
+
+* Contained Visual Studio solution with tests
+* Include `readme.markdown' with description of your recipe
+* Include `nuget.config' in solution directory pointing at `/src/packages'
+* Solution directory named "Recipe" that includes `readme.markdown' and `nuget.config'
+* Follow directory naming convention, see the Wiki ([headers here](https://github.com/ianbattersby/FubuMVC.Recipes/wiki))
