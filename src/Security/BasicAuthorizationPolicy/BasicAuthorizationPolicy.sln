@@ -5,6 +5,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAuthorizationPolicy.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAuthorizationPolicy.Tests.Unit", "BasicAuthorizationPolicy.Tests.Unit\BasicAuthorizationPolicy.Tests.Unit.csproj", "{F6344C26-99B4-486F-B41D-CD13ABF3A57F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recipe", "Recipe", "{E9AAB642-DCC2-4D13-A18A-A7BF5F2B7741}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+		readme.markdown = readme.markdown
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
