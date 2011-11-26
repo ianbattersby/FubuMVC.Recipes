@@ -64,7 +64,7 @@
         }
 
         [Test]
-        public void logging_on_with_valid_details_does_not_call_formsauth()
+        public void logging_on_with_valid_details_does_call_formsauth()
         {
             var result = this.postHandler.Execute(
                 new LogOn.LogOnRequestModel()
