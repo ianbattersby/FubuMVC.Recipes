@@ -1,11 +1,17 @@
 ﻿namespace BasicAuthorizationPolicy.Tests.Unit.Handlers.Account.LogOn
 {
     using System;
-    using LogOn = BasicAuthorizationPolicy.Web.Handlers.Account.LogOn;
     using NUnit.Framework;
+    using LogOn = BasicAuthorizationPolicy.Web.Handlers.Account.LogOn;
 
     [TestFixture]
-    public class GetHandlerTests : GetHandlerBase<LogOn.GetHandler>
+    public class GetHandlerTests
     {
+        [Test]
+        public void when_calling_execute_return_is_not_null()
+        {
+            var handler = new LogOn.GetHandler();
+            Assert.IsNotNull(handler.Execute());
+        }
     }
 }

@@ -74,7 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Handlers\DeadEnd\GetHandlerTests.cs" />
-    <Compile Include="Handlers\GetHandlerBase.cs" />
     <Compile Include="Handlers\Home\GetHandlerTests.cs" />
     <Compile Include="Handlers\Home\PostHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
