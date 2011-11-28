@@ -1,0 +1,13 @@
+﻿<use namespace="ICurrentChainRecipe.Web.Handlers.Home" />
+<viewdata model="ICurrentChainRecipe.Web.Handlers.Home.HomeViewModel" />
+
+<content:title>Home</content:title>
+<content:main>
+    <use file="ChainInfo" />
+
+    <Form model="HomeRequestModel">
+        <button type="submit">
+          <span>Redirect via Post</span>
+        </button>
+    </Form>
+</content:main>

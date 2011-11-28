@@ -1,0 +1,15 @@
+﻿body 
+{
+    font-family: Consolas, Courier New, Verdana;
+    font-size: 12px;
+}
+
+a, a:link, a:visited
+{
+    color: Blue;
+}
+
+ul li
+{
+    margin-bottom: 3px;
+}

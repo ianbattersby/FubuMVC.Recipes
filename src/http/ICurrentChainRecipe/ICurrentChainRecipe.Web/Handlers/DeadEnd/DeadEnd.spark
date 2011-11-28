@@ -1,0 +1,8 @@
+﻿<use namespace="ICurrentChainRecipe.Web.Handlers.DeadEnd" />
+<viewdata model="ICurrentChainRecipe.Web.Handlers.DeadEnd.DeadEndViewModel" />
+
+<content:title>Dead End</content:title>
+
+<content:main>
+    <use file="ChainInfo" />
+</content:main>

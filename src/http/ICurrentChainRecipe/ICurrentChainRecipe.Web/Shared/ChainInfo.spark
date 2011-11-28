@@ -1,0 +1,23 @@
+﻿    <h2>Unique Identifier</h2>
+    ${Model.Id}
+
+    <h2>Route Definition</h2>
+    ${Model.RouteDefinition}
+
+    <h2>Calls</h2>
+    <p if='Model.Calls.Count() == 0'>None</p>
+    <for each="var c in Model.Calls">
+       <p>${c}</p>
+    </for>
+
+    <h2>Outputs</h2>
+    <p if='Model.Outputs.Count() == 0'>None</p>
+    <for each="var a in Model.Outputs">
+       <p>${a}</p>
+    </for>
+
+    <h2>Filters</h2>
+    <p if='Model.Filters.Count() == 0'>None</p>
+    <for each="var f in Model.Filters">
+       <p>${f}</p>
+    </for>
