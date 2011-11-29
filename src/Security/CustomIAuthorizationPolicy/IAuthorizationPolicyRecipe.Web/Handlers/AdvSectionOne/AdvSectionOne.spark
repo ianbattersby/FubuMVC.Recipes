@@ -1,0 +1,10 @@
+﻿<use namespace="IAuthorizationPolicyRecipe.Web.Handlers.AdvSectionOne" />
+<viewdata model="IAuthorizationPolicyRecipe.Web.Handlers.AdvSectionOne.AdvSectionOneViewModel" />
+
+<content:title>Advanced Area</content:title>
+
+<content:main>
+    <p>
+        This is the advanced area, you must be in the AccessGroupReference.Advanced group to access it.
+    </p>
+</content:main>

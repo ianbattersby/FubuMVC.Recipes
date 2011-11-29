@@ -1,0 +1,18 @@
+﻿<use namespace="IAuthorizationPolicyRecipe.Web.Handlers.Home" />
+<viewdata model="IAuthorizationPolicyRecipe.Web.Handlers.Home.HomeViewModel" />
+
+<content:title>Home</content:title>
+
+<content:main>
+    <ul>
+        <li>
+            <a href="/adv-section-one" alt="Section One (Advanced)">Section One</a> (Advanced role required)
+        </li>
+        <li>
+            <a href="/adv-section-maps" alt="Maps (Advanced + Maps)">Maps</a> (Maps role required)
+        </li>
+        <li>
+            <a href="/account/log-out" alt="Logout (Basic)">Log out</a> (Basic role required)
+        </li>
+    </ul>
+</content:main>

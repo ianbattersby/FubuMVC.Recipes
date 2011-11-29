@@ -1,0 +1,8 @@
+﻿<use namespace="IRedirectableRecipe.Web.Handlers.DeadEnd" />
+<viewdata model="IRedirectableRecipe.Web.Handlers.DeadEnd.DeadEndViewModel" />
+
+<content:title>Dead End</content:title>
+
+<content:main>
+	You reached a dead-end, but that means it worked! Yippee :-)
+</content:main>

@@ -1,0 +1,18 @@
+﻿<use namespace="IRedirectableRecipe.Web.Handlers.Home" />
+<viewdata model="IRedirectableRecipe.Web.Handlers.Home.HomeViewModel" />
+
+<content:title>Home</content:title>
+<content:main>
+    <Form model="HomeRequestModel">
+        <div class="formInput">
+            <p>
+                <LabelFor model="HomeRequestModel" property="RedirectConfirmation" />
+                <InputFor model="HomeRequestModel" property="RedirectConfirmation" />
+                <small>&lt;&lt; Enter "REDIRECT" here to proceed elsewhere!</small>
+            </p>
+        </div>
+        <button type="submit">
+          <span>Go!</span>
+        </button>
+    </Form>
+</content:main>
