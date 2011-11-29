@@ -1,0 +1,42 @@
+﻿body 
+{
+    font-family: Consolas, Courier New, Verdana;
+    font-size: 12px;
+}
+
+a, a:link, a:visited
+{
+    color: Blue;
+}
+
+.formInput
+{
+    margin: 10px;
+}
+
+.formInput label
+{
+    float: left;
+    width: 170px;
+    padding-top: 5px;
+}
+
+.formInput p
+{
+    clear: both;
+}
+
+a.addItem
+{
+    margin-left: 10px;
+}
+
+.dynamicList
+{
+    list-style-type: square;
+}
+
+.addItem span
+{
+    padding: .2em .6em !important;
+}

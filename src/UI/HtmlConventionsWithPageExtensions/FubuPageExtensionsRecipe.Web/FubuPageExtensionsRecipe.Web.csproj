@@ -6,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D187E66F-359C-49CB-94C3-3F109CF98A12}</ProjectGuid>
+    <ProjectGuid>{E2DE09B5-54D5-4A6B-95D7-3D9F5D6F2434}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FubuContinuationRecipe.Web</RootNamespace>
-    <AssemblyName>FubuContinuationRecipe.Web</AssemblyName>
+    <RootNamespace>FubuPageExtensionsRecipe.Web</RootNamespace>
+    <AssemblyName>FubuPageExtensionsRecipe.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
@@ -46,7 +46,7 @@
       <HintPath>..\..\..\packages\FubuMVC.References.0.9.2.667\lib\net40\FubuMVC.Core.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Spark">
-      <HintPath>..\..\..\packages\FubuMVC.Spark.0.9.2.675\lib\net40\FubuMVC.Spark.dll</HintPath>
+      <HintPath>..\..\..\packages\FubuMVC.Spark.0.9.2.679\lib\net40\FubuMVC.Spark.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.StructureMap">
       <HintPath>..\..\..\packages\FubuMVC.References.0.9.2.667\lib\net40\FubuMVC.StructureMap.dll</HintPath>
@@ -60,7 +60,7 @@
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\..\..\packages\FubuMVC.0.9.2.675\lib\Microsoft.Web.Infrastructure.dll</HintPath>
+      <HintPath>..\..\..\packages\FubuMVC.0.9.2.679\lib\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Spark">
       <HintPath>..\..\..\packages\Spark.1.6\lib\NET40\Spark.dll</HintPath>
@@ -88,8 +88,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\style.css" />
-    <None Include="Shared\Application.spark" />
+    <Content Include="Content\Css\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Content\Css\style.css" />
+    <Content Include="Content\Images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\Images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\Images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\Images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\Images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\Images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Content\Scripts\RecipeHtmlConventions.js" />
     <Content Include="Shared\bindings.xml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -102,16 +119,20 @@
   <ItemGroup>
     <Compile Include="App_Start\FubuMVC.cs" />
     <Compile Include="ConfigureFubuMVC.cs" />
-    <Compile Include="Handlers\DeadEnd\DeadEndViewModel.cs" />
-    <Compile Include="Handlers\DeadEnd\GetHandler.cs" />
+    <Compile Include="Conventions\RecipeHtmlConventionsRegistry.cs" />
+    <Compile Include="Handlers\Books\Create\PostHandler.cs" />
+    <Compile Include="Handlers\Genre\Create\CreateRequestModel.cs" />
+    <Compile Include="Handlers\Genre\Create\PostHandler.cs" />
+    <Compile Include="Models\BookStatus.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Handlers\Books\Create\CreateRequestModel.cs" />
+    <Compile Include="Handlers\Books\Create\CreateViewModel.cs" />
+    <Compile Include="Handlers\Books\Create\GetHandler.cs" />
     <Compile Include="Handlers\HandlersMarker.cs" />
     <Compile Include="Handlers\Home\GetHandler.cs" />
-    <Compile Include="Handlers\Home\HomeRequestModel.cs" />
     <Compile Include="Handlers\Home\HomeViewModel.cs" />
-    <Compile Include="Handlers\Home\PostHandler.cs" />
-    <Compile Include="..\..\..\CommonAssemblyInfo.cs">
-      <Link>Properties\CommonAssemblyInfo.cs</Link>
-    </Compile>
+    <Compile Include="Models\ImageDisplayModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -119,9 +140,11 @@
   <ItemGroup>
     <Content Include="fubu-content\fubumvc-diagnostics.zip" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Handlers\DeadEnd\DeadEnd.spark" />
+    <None Include="Handlers\Books\Create\Create.spark" />
     <None Include="Handlers\Home\Home.spark" />
+    <None Include="Shared\Application.spark" />
     <None Include="Shared\_global.spark" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -132,7 +155,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52683</DevelopmentServerPort>
+          <DevelopmentServerPort>50452</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

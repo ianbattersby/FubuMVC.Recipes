@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FubuPageExtensions Recipe</title>
+    <link rel="stylesheet" type="text/css" href="/content/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/content/css/jquery-ui-1.8.16.custom.css" media="screen" />
+    <script type="text/javascript" src="/Content/Scripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/RecipeHtmlConventions.js"></script>
+    <script type="text/javascript">
+	    <use:script />
+    </script>
+</head>
+<body>
+    <h1>
+        <use:title />
+    </h1>
+    <use:main />
+</body>
+</html>

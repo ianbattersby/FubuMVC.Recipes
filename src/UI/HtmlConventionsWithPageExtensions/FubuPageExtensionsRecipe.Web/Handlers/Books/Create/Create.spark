@@ -1,0 +1,88 @@
+﻿<use namespace="FubuPageExtensionsRecipe.Web.Handlers.Books.Create" />
+<viewdata model="FubuPageExtensionsRecipe.Web.Handlers.Books.Create.CreateViewModel" />
+
+<content:title>Create Book</content:title>
+
+<content:script>
+	$(function() {
+		$( "#genreContainer" ).dialog({
+			height: 100,
+			modal: true,
+            autoOpen: false
+		});
+	});
+    
+    $(function(){
+		$('#genreForm').submit(function(event){
+			event.preventDefault();
+
+			var name = $(this).children('input[name=Name]').val();
+
+            if (name != '')
+            {
+                var found = false;
+
+                $('select[name=Genre] option').each(function() {
+                    if ($(this).text() == name)
+                    {
+                        found = true;
+                    }
+                });
+
+                if (!found)
+                {
+			        $.post($(this).attr('action'), { Name: name }, function(data) {
+    			        $('select[name=Genre]').append('<option value="' + data +'">' + name + '</option>');
+                        $('select[name=Genre]').val(data);
+			        });
+                }
+
+                $(this).children('input[name=Name]').val('');
+            }
+
+            $( "#genreContainer" ).dialog('close');
+		});
+	});
+</content:script>
+
+<content:main>
+    <form action="${this.Urls.UrlFor<CreateRequestModel>()}" method="post" enctype="multipart/form-data">
+        <div class="formInput">
+            <p>
+                ${this.LabelFor<CreateRequestModel>(m => m.Title)} 
+                ${this.InputFor<CreateRequestModel>(m => m.Title)}
+            </p>
+            <p>
+                ${this.LabelFor<CreateRequestModel>(m => m.Description_BigText)}
+                ${this.InputFor<CreateRequestModel>(m => m.Description_BigText).Attr("rows", "5")}
+            </p>
+            <p>
+                ${this.LabelFor<CreateRequestModel>(m => m.BookStatus)}
+                ${this.InputFor<CreateRequestModel>(m => m.BookStatus)}
+            </p>
+            <p>
+                ${this.LabelFor<CreateRequestModel>(m => m.Genre)}
+                ${this.InputFor<CreateViewModel>(m => m.Genres)}
+            </p>
+            <p>
+                ${this.LabelFor<CreateRequestModel>(m => m.Authors)}
+                ${this.InputFor<CreateRequestModel>(m => m.Authors)}
+            </p>
+            <p>
+                 ${this.LabelFor<CreateRequestModel>(m => m.Image)}
+                 ${this.InputFor<CreateRequestModel>(m => m.Image)}
+            </p>
+        </div>
+        <button type="submit">
+          <span>Create Book!</span>
+        </button>
+    </Form>
+
+    <div id="genreContainer" title="Add Genre" >
+        <Form name="genreForm" model="FubuPageExtensionsRecipe.Web.Handlers.Genre.Create.CreateRequestModel">
+	        <input type="text" name="Name" />
+            <br />
+	        <input type="submit" value="Create" />
+        </Form>
+    </div>
+</content:main>

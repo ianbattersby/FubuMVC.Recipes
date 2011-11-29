@@ -1,0 +1,8 @@
+﻿<use namespace="FubuPageExtensionsRecipe.Web.Handlers" />
+<viewdata model="FubuPageExtensionsRecipe.Web.Handlers.Home.HomeViewModel" />
+
+<content:title>Home</content:title>
+<content:main>
+    <!-- This should be LinkTo but doesn't cater for zero-in handlers (yet!) -->
+    <a href="/books/create">Create Book!</a>
+</content:main>
