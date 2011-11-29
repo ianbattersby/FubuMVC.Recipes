@@ -5,6 +5,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICurrentChainRecipe.Web", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICurrentChainRecipe.Tests.Unit", "ICurrentChainRecipe.Tests.Unit\ICurrentChainRecipe.Tests.Unit.csproj", "{69EDB439-3963-4C79-ADBA-7A1E9A1EC50F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recipe", "Recipe", "{670587D0-2125-44D3-B4B1-58A4B84FBD3B}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+		readme.markdown = readme.markdown
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
