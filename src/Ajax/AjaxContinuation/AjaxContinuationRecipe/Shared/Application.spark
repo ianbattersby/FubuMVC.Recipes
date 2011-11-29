@@ -7,6 +7,6 @@
 		<use content="scripts" />
 	</head>
 <body>
-	<use content="main" />
+	<use:main />
 </body>
 </html>

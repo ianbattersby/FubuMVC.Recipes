@@ -5,8 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="/content/css/style.css" media="screen" />
 </head>
 <body>
-	<h1><use content="title" /></h1>
+	<h1><use:title /></h1>
 
-	<use content="main" />
+	<use:main />
 </body>
 </html>
