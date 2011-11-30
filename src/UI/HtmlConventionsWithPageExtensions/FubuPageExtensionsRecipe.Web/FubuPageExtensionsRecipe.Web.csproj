@@ -132,7 +132,9 @@
     <Compile Include="Handlers\Home\GetHandler.cs" />
     <Compile Include="Handlers\Home\HomeViewModel.cs" />
     <Compile Include="Models\ImageDisplayModel.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\..\..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
