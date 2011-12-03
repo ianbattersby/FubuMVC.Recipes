@@ -1,0 +1,20 @@
+﻿<use namespace="IUrlRegistryRecipe.Web.Controllers" />
+<use namespace="IUrlRegistryRecipe.Web.Models" />
+<use namespace="IUrlRegistryRecipe.Web.Models.Books" />
+<use namespace="FubuMVC.Core.Urls" />
+
+<viewdata model="IUrlRegistryRecipe.Web.Models.HomeViewModel" />
+
+<content:title>Home</content:title>
+<content:main>
+    <h2>Actions</h2>
+    <for each="var cl in Model.CallLists">
+        <p>${ cl.HtmlDescription }</p>
+        <p if='cl.Calls.Count() == 0'>None</p>
+        <ul class="nodots">
+        <for each="var a in cl.Calls.AsEnumerable()">
+           <li style="margin:2px;clear:both;"><span style="float:left;width:600px;">${ a.Key }</span> &gt;&gt; &quot;${ a.Value.Invoke(this.Urls) }&quot;</li>
+        </for>
+        </ul>
+    </for>
+</content:main>

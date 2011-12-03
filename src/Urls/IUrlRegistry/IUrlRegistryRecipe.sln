@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IUrlRegistryRecipe.Web", "IUrlRegistryRecipe.Web\IUrlRegistryRecipe.Web.csproj", "{8B9396EB-2189-4771-B111-6DFE6F7D4BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IUrlRegistryRecipe.Tests.Unit", "IUrlRegistryRecipe.Tests.Unit\IUrlRegistryRecipe.Tests.Unit.csproj", "{BC96C260-FE60-49DB-968E-FD340CE22525}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B9396EB-2189-4771-B111-6DFE6F7D4BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9396EB-2189-4771-B111-6DFE6F7D4BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9396EB-2189-4771-B111-6DFE6F7D4BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9396EB-2189-4771-B111-6DFE6F7D4BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC96C260-FE60-49DB-968E-FD340CE22525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC96C260-FE60-49DB-968E-FD340CE22525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC96C260-FE60-49DB-968E-FD340CE22525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC96C260-FE60-49DB-968E-FD340CE22525}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
