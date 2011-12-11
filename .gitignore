@@ -17,6 +17,9 @@ artifacts
 packages
 repositories.config
 
+# mvim
+*.swp
+
 # Resharper
 *.resharper.user
 *.ReSharper.user
